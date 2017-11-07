@@ -10,9 +10,10 @@ const API_URL = 'https://api.icowatchlist.com/public/v1/';
 
 router.get('/icos/:filter', (req, res) => {
 
-	axios.get(`${API_URL}/${req.params.filter}`).then((response) => {
-    console.log(response.data.ico[req.params.filter])
-		res.send(response.data.ico[req.params.filter]);
+  const { filter } = req.params;
+	axios.get(`${API_URL}/${filter}`).then((response) => {
+    console.log(`Got request for: ${filter}`)
+		res.send(response.data.ico[filter]);
 	});
 	
 });

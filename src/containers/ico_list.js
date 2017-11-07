@@ -9,7 +9,6 @@ import Timer from '../components/timer';
 class IcoList extends Component {
 
   componentWillMount() {
-    // this.setState({selectedFilter: 'live'})
     this.props.fetchIcos();
   }
 
@@ -56,7 +55,6 @@ class IcoList extends Component {
 }
 
 function mapStateToProps(state) {
-  console.log(JSON.stringify(state))
   return {
     icos: state.icos.data
   };
