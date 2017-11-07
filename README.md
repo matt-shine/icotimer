@@ -1,25 +1,10 @@
-# ReduxSimpleStarter
+First react/redux project :)
 
-Interested in learning [Redux](https://www.udemy.com/react-redux/)?
+Lists live, upcoming and recently finished ICO's using the https://icowatchlist.com/ API. ReduxSimpleStarter (https://github.com/StephenGrider/ReduxSimpleStarter) used for boilerplate.
 
-### Getting Started
+Work in progress!
 
-There are two methods for getting started with this repo.
+#### Running
 
-#### Familiar with Git?
-Checkout this repo, install dependencies, then start the gulp process with the following:
-
-```
-> git clone https://github.com/StephenGrider/ReduxSimpleStarter.git
-> cd ReduxSimpleStarter
-> npm install
-> npm start
-```
-
-#### Not Familiar with Git?
-Click [here](https://github.com/StephenGrider/ReactStarter/releases) then download the .zip file.  Extract the contents of the zip file, then open your terminal, change to the project directory, and:
-
-```
-> npm install
-> npm start
-```
+node src/server.js
+npm start
