@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { DropdownButton, MenuItem } from 'react-bootstrap';
+import $ from 'jquery';
 
 import { selectFilter, fetchIcos } from '../actions/index';
 
@@ -14,7 +15,6 @@ class ListFilter extends Component {
   }
 
   componentWillMount() {
-    // this.setState({selectedFilter: 'live'})
     this.props.selectFilter();
   }
 

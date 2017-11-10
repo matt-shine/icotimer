@@ -8,20 +8,16 @@ import Timer from '../components/timer';
 
 class IcoList extends Component {
 
+  constructor(props) {
+    super(props);
+    this.renderIco = this.renderIco.bind(this);
+  }
+
   componentWillMount() {
     this.props.fetchIcos();
   }
 
   renderIco(ico) {
-    let cardStyle = {
-      color: 'black',
-      backgroundColor: 'white',
-      display: 'block',
-      height: '200px',
-      marginTop: '5px',
-      marginBottom: '5px',
-      padding: '10px'
-    }
 
     let descriptionStyle = {
       textAlign: 'center',
@@ -29,16 +25,23 @@ class IcoList extends Component {
     }
 
     return ( 
-      <div key={ico.name} className="col-sm-6">
-        <div style={cardStyle}>
-          <div>
-            <IcoHead name={ico.name} image={ico.image} />
-            <div style={descriptionStyle}>{ico.description}</div>
-            <Timer startTime={ico.start_time} endTime={ico.end_time} timezone={ico.timezone} />
+      <div key={ico.name}>
+        <div className="col-sm-12">
+          <div className="ico-card">
+            <div>
+              <IcoHead name={ico.name} image={ico.image} />
+              <div style={descriptionStyle}>{ico.description}</div>
+              <div style={descriptionStyle}><a href={ico.website_link}>{ico.name}</a></div>
+              <div className="row">
+                <div className="col-sm-4"></div>
+                <Timer type={this.props.selectedFilter} startTime={ico.start_time} endTime={ico.end_time} timezone={ico.timezone} />
+                <div className="col-sm-4"></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    )
+    );
   }
 
   render() {
@@ -56,7 +59,8 @@ class IcoList extends Component {
 
 function mapStateToProps(state) {
   return {
-    icos: state.icos.data
+    icos: state.icos.data,
+    selectedFilter: state.icos.selectedFilter
   };
 }
 

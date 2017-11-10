@@ -20,11 +20,11 @@ export default class App extends Component {
             <h1>ICO Timer</h1>
           </div>
         </div>
-        <div className="row">
-          <div className="col-sm-12">
+        {/*<div className="row">*/}
+          {/*<div className="col-sm-12">*/}
             <IcoList />
-          </div>
-        </div>
+          {/*</div>*/}
+        {/*</div>*/}
       </div>
     );
   }

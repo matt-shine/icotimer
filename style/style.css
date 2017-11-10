@@ -3,7 +3,38 @@ body {
   color: white;
 }
 
+.ico-card {
+  color: black;
+  background-color: white;
+  display: inline-block;
+  min-height: 200px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 10px;
+  width: 100%;
+}
+
 .header {
   text-align: center;
   margin-top: 20px;
+}
+
+.timer {
+  margin-top: 10px;
+  padding-bottom: 10px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.timer-block-value {
+  display: block;
+  text-align: center;
+  font-size: large;
+  font-weight: bold;
+}
+
+.timer-block-label {
+  text-align: center;
+  font-size: small;
 }
