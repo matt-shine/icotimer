@@ -26,10 +26,10 @@ class ListFilter extends Component {
   render() {
     return (
       <div>
-        <DropdownButton id="dropdown" title={this.props.selectedFilter} onSelect={this.onDropdownSelect}>
-          <MenuItem eventKey="live">Live</MenuItem>
-          <MenuItem eventKey="upcoming">Upcoming</MenuItem>
-          <MenuItem eventKey="finished">Finished</MenuItem>
+        <DropdownButton id="dropdown" className="filter-select-btn" bsSize="large" title={this.props.selectedFilter} onSelect={this.onDropdownSelect}>
+          <MenuItem eventKey="live">live</MenuItem>
+          <MenuItem eventKey="upcoming">upcoming</MenuItem>
+          <MenuItem eventKey="finished">finished</MenuItem>
         </DropdownButton>
       </div>
     )

@@ -3,6 +3,10 @@ body {
   color: white;
 }
 
+.filter-select-btn {
+  width: 150px;
+}
+
 .ico-card {
   color: black;
   background-color: white;
